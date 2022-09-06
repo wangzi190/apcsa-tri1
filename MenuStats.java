@@ -61,7 +61,7 @@ public class MenuStats {
 
             case 2: //mode
                 int i, j, z, tmp, maxCount, modeValue;
-                int[] tally=new int[num_value];
+                int[] tally = new int[num_value];
                 for(i = 0; i < num_value; i++) {
                     for(j = 0; j < num_value - i; j++) {
                         if(j+1 != num_value) {
@@ -74,7 +74,7 @@ public class MenuStats {
                     }
                 }
                 for (i = 0; i < num_value; i++) {
-                    for(z=i+1;z<num_value;z++) {
+                    for(z = i + 1; z < num_value; z++) {
                         if(invalue[i]==invalue[z]) {
                             tally[i]++;
                         }
@@ -82,7 +82,7 @@ public class MenuStats {
                 }
                 maxCount = 0;
                 modeValue = 0;
-                for (i = 0; i <num_value; i++) {
+                for (i = 0; i < num_value; i++) {
                     if (tally[i] > maxCount) {
                         maxCount = tally[i];
                         modeValue = invalue[i];
