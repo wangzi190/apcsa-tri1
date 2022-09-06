@@ -136,14 +136,14 @@ window.onload = wrap_img;
 
 <span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StandardDeviation</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TemperatureConversion</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Print each number in your data set. To finish, enter &#39;f.&#39;&quot;</span><span class="p">);</span>
-        <span class="kt">double</span><span class="o">[]</span> <span class="n">numArray</span> <span class="o">=</span> <span class="p">{};</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Print a temperate in Fahrenheit. The output will be that temperature in Celsius.&quot;</span><span class="p">);</span>
+        
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-            <span class="kt">float</span> <span class="n">num</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">String</span> <span class="n">num</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="sc">&#39;f&#39;</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -155,28 +155,36 @@ window.onload = wrap_img;
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Standard Deviation = %.6f&quot;</span><span class="p">,</span> <span class="n">SD</span><span class="p">);</span>
     <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">calculateSD</span><span class="p">(</span><span class="kt">double</span> <span class="n">numArray</span><span class="o">[]</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">standardDeviation</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">numArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
-
-        <span class="k">for</span><span class="p">(</span><span class="kt">double</span> <span class="n">num</span> <span class="p">:</span> <span class="n">numArray</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="kt">double</span> <span class="n">mean</span> <span class="o">=</span> <span class="n">sum</span><span class="o">/</span><span class="n">length</span><span class="p">;</span>
-
-        <span class="k">for</span><span class="p">(</span><span class="kt">double</span> <span class="n">num</span><span class="p">:</span> <span class="n">numArray</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">standardDeviation</span> <span class="o">+=</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">mean</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">standardDeviation</span><span class="o">/</span><span class="n">length</span><span class="p">);</span>
-    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            if (</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">num == &#39;f&#39;</span><span class="ansi-black-intense-fg ansi-bold">) {</span>
+<span class="ansi-red-intense-fg ansi-bold">bad operand types for binary operator &#39;==&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">  first type:  java.lang.String</span>
+<span class="ansi-red-intense-fg ansi-bold">  second type: char</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">parseInt</span><span class="ansi-black-intense-fg ansi-bold">(num);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method parseInt(java.lang.String)</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">numArray.push</span><span class="ansi-black-intense-fg ansi-bold">(num);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method push(java.lang.String)</span>
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
