@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.lang.Math;
 
 public class MenuStats {
-    public MenuStats() {
+    public Menu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("This is a console menu that you can use to calculate");
         System.out.println("the mean, median, mode, or range of a data set.");
@@ -31,8 +31,11 @@ public class MenuStats {
         System.out.println("1 - Median");
         System.out.println("2 - Mode");
         System.out.println("3 - Range");
+        float answer = action(len, int[] dataSet, selection);
+        System.out.println("-------------------------\n");
+        System.out.println("Your answer is:" + answer);
     }
-    private float action(len, int[] dataSet, selection) {
+    public float action(len, int[] dataSet, selection) {
         float value = 0;
         float temp = 0;
         switch (selection) {
@@ -45,11 +48,47 @@ public class MenuStats {
 
             case 1: //median
                 temp = len / 2;
-
+                if (len % 2 == 0) {
+                    temp = dataSet[temp] - dataSet[temp - 1];
+                    temp = temp / 2;
+                    value = temp;
+                } else {
+                    temp = Math.round(temp);
+                    temp = temp - 1;
+                    value = dataSet[temp];
+                }
             break;
 
             case 2: //mode
-
+                int i, j, z, tmp, maxCount, modeValue;
+                int[] tally=new int[num_value];
+                for(i = 0; i < num_value; i++) {
+                    for(j = 0; j < num_value - i; j++) {
+                        if(j+1 != num_value) {
+                            if(invalue[j]>invalue[j+1]) {
+                                tmp=invalue[j];
+                                invalue[j]=invalue[j+1];
+                                invalue[j+1]=tmp;
+                            }
+                        }
+                    }
+                }
+                for (i = 0; i < num_value; i++) {
+                    for(z=i+1;z<num_value;z++) {
+                        if(invalue[i]==invalue[z]) {
+                            tally[i]++;
+                        }
+                    }
+                }
+                maxCount = 0;
+                modeValue = 0;
+                for (i = 0; i <num_value; i++) {
+                    if (tally[i] > maxCount) {
+                        maxCount = tally[i];
+                        modeValue = invalue[i];
+                    }
+                }
+                value = modeValue;
             break;
 
             case 3: //range
@@ -58,5 +97,8 @@ public class MenuStats {
             break;
         }
         return value;
+    }
+    public static void main(String[] args) {
+        new MenuStats();
     }
 }
