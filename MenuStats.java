@@ -101,4 +101,5 @@ public class MenuStats {
     public static void main(String[] args) {
         new MenuStats();
     }
+    MenuStats.main(null);
 }
