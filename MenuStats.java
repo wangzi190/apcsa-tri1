@@ -34,16 +34,29 @@ public class MenuStats {
     }
     private float action(len, int[] dataSet, selection) {
         float value = 0;
+        float temp = 0;
         switch (selection) {
-            case 0:
-                for ()
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
+            case 0: //mean
+                for (int i = 0; i < len; i++) {
+                    value = value + dataSet[i];
+                }
+                value = value / len;
+            break;
+
+            case 1: //median
+                temp = len / 2;
+
+            break;
+
+            case 2: //mode
+
+            break;
+
+            case 3: //range
+                temp = len - 1;
+                value = dataSet[temp] - dataSet[0];
+            break;
         }
+        return value;
     }
 }
