@@ -10,7 +10,7 @@ title: Extra Credit
 Hi, these are my presentation notes. They are just for my reference, but here they are in case they are necessary for the credit.
 
 I also stayed back to talk 1-on-1 with a few of the presenters about what learning computer science is like in college, and think I got some pretty good insight. But ultimately, the best insight will be experiencing all of these things for myself. Thank you for arranging this presentation, I found it inspirational and fun!
----
+
 Computer science struggles 
 
 Frustration with debugging; being disciplined enough to patiently solve problems
