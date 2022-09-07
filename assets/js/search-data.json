@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Week 2 Concepts",
-            "content": "Week 2 Concepts . Because Java is an object-oriented programming language, data involved in Java programs are associated with classes and objects. A class is a “blueprint” for creating objects, and an object is an instance of a class. For example, if “animal” was a class, “bird” is an instance of that class. . Classes and objects are associated with attributes and methods. An attribute is data attributed to a class or object, while a method is a procedure associated with a class or object. Generally, a class will include attributes or methods which the object “inherits.” A Java method must be declared within a class. . Code.org lessons completed: image .",
+            "content": "Because Java is an object-oriented programming language, data involved in Java programs are associated with classes and objects. A class is a “blueprint” for creating objects, and an object is an instance of a class. For example, if “animal” was a class, “bird” is an instance of that class. . Classes and objects are associated with attributes and methods. An attribute is data attributed to a class or object, while a method is a procedure associated with a class or object. Generally, a class will include attributes or methods which the object “inherits.” A Java method must be declared within a class. . Code.org lessons completed: image .",
             "url": "https://wangzi190.github.io/apcsa-tri1/2022/09/06/week-2-concepts.html",
             "relUrl": "/2022/09/06/week-2-concepts.html",
             "date": " • Sep 6, 2022"
