@@ -301,8 +301,11 @@ window.onload = wrap_img;
 <span class="cm">The statement if "!a &amp;&amp; !b" will run if both a and b are false.</span>
 <span class="cm">Below is the example to show that De Morgan's law is valid.</span>
 <span class="cm">*/</span>
-<span class="k">if</span> <span class="p">((</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">||</span> <span class="o">!</span><span class="n">b</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"If this line prints, it proves that (NOT(A and B)) and (NOT A or NOT B) can both be true. If this is true, then the reverse is also true. Therefore, De Morgan's law is valid."</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">||</span> <span class="o">!</span><span class="n">b</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"If this line prints, it proves that (NOT(A and B)) and (NOT A or NOT B) can both be true."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"If this line prints, it proves that (NOT(A or B)) and (NOT A and NOT B) can both be true."</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -316,7 +319,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>If this line prints, it proves that (NOT(A and B)) and (NOT A or NOT B) can both be true. If this is true, then the reverse is also true. Therefore, De Morgan's law is valid.
+<pre>If this line prints, it proves that (NOT(A and B)) and (NOT A or NOT B) can both be true.
+If this line prints, it proves that (NOT(A or B)) and (NOT A and NOT B) can both be true.
 </pre>
 </div>
 </div>
